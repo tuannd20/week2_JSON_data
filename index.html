@@ -1,409 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mulish:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mulish:wght@300&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Internship</title>
-    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/app.css" />
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css"
+    />
+    <!-- Tailwind CSS  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
     <!-- sass ./sass/app.scss ./css/app.css --watch -->
     <div class="wrapper">
-        <!-- Start header -->
-        <header class="header">
-            <div class="containers">
-                <div class="header-main">
-                    <img srcset="./images/smart.png 4x" alt="" title="SmartDev">
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Home</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Destinations</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">About</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Partner</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="login_page.html" class="button button--secondaryBtn">Login</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="button button--primary">Register</a>
-                        </li>
-                    </ul>
-                    <i class="fas fa-bars menu-toggle"></i>
+      <!-- Start header -->
+      <header class="header">
+        <div class="containers">
+          <div class="header-main">
+            <img srcset="./images/smart.png 4x" alt="" title="SmartDev" />
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="#" class="menu-link">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Destinations</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">About</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Partner</a>
+              </li>
+              <li class="menu-item">
+                <a
+                  id="logintBtn"
+                  href="login_page.html"
+                  class="button button--secondaryBtn"
+                  >Login</a
+                >
+              </li>
+              <li class="menu-item">
+                <a id="registerBtn" href="#" class="button button--primary"
+                  >Register</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link"><h3 id="user"></h3></a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="button button--primary" id="btnLogout"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+            <i class="fas fa-bars menu-toggle"></i>
+          </div>
+        </div>
+      </header>
+      <!-- End header -->
+
+      <!-- Start main -->
+      <main>
+        <!-- Start section hero  -->
+        <section class="hero">
+          <div class="containers">
+            <div class="hero-main">
+              <div class="hero-content">
+                <h1 class="heading hero-heading">Explore and Travel</h1>
+                <div class="hero-caption">Holiday finder</div>
+                <div class="hero-form">
+                  <div class="dropdown">
+                    <div class="dropdown-select">
+                      <span class="dropdown-value">Location</span>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-list">
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div class="dropdown-select">
+                      <span class="dropdown-value">Activity</span>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-list">
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div class="dropdown-select">
+                      <span class="dropdown-value">Grade</span>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-list">
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div class="dropdown-select">
+                      <span class="dropdown-value">Date</span>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-list">
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                      <div class="dropdown-item">title</div>
+                    </div>
+                  </div>
                 </div>
+                <a href="#!" class="button button--primary">Explore</a>
+              </div>
+              <div class="hero-image">
+                <img srcset="./images/img1.png 2.2x" alt="" />
+              </div>
             </div>
-        </header>
-        <!-- End header -->
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- End section hero  -->
 
-        <!-- Start main -->
-        <main>
-            <!-- Start section hero  -->
-            <section class="hero">
-                <div class="containers">
-                    <div class=" hero-main ">
-                        <div class="hero-content">
-                            <h1 class="heading hero-heading">Explore and Travel</h1>
-                            <div class="hero-caption">Holiday finder</div>
-                            <div class="hero-form">
-                                <div class="dropdown">
-                                    <div class="dropdown-select">
-                                        <span class="dropdown-value">Location</span>
-                                        <i class="fas fa-angle-down"></i>
-                                    </div>  
-                                    <div class="dropdown-list">
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="dropdown-select">
-                                        <span class="dropdown-value">Activity</span>
-                                        <i class="fas fa-angle-down"></i>
-                                    </div>  
-                                    <div class="dropdown-list">
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="dropdown-select">
-                                        <span class="dropdown-value">Grade</span>
-                                        <i class="fas fa-angle-down"></i>
-                                    </div>  
-                                    <div class="dropdown-list">
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="dropdown-select">
-                                        <span class="dropdown-value">Date</span>
-                                        <i class="fas fa-angle-down"></i>
-                                    </div>  
-                                    <div class="dropdown-list">
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                        <div class="dropdown-item">title</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#!" class="button button--primary">Explore</a>
-                        </div>
-                        <div class="hero-image">
-                            <img srcset="./images/img1.png 2.2x" alt="">
-                        </div>
-                    </div>
-                    <div class="line">
-                    </div>
-                </div>
-            </section>
-            <!-- End section hero  -->
-
-            <!-- Start section Explore -->
-            <section class="explore">
-                <div class="containers">
-                    <div class="explore-main">
-                        <div class="explore-image">
-                            <img srcset="./images/img2.png 2x" alt="">
-                        </div>
-                        <div class="explore-content">
-                            <h2 class="heading heading--small explore-heading">
-                                A new way to explore the world
-                            </h2>
-                            <p class="text explore-desc" style="text-align: justify;">
-                                For decades travellers have reached for Lonely Planet books
-                                when looking to plan and execute their perfect trip, but now,
-                                they can also let Lonely Planet Experiences lead the way. For decades travellers have reached for Lonely Planet books
-                                when looking to plan and execute their perfect trip, but now,
-                                they can also let Lonely Planet Experiences lead the way
-                            </p>
-                            <a href="#!" class="button button--primary">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="line">
-                    </div>
-                </div>
-            </section>
-            <!-- End section Explore  -->
-
-            <!-- Start section Feature -->
-                <section class="destination">
-                    <div class="containers">
-                        <div class="destination-header">
-                            <h2 class="heading heading--small">Feature destination</h2>
-                            <a href="#" class="destination-more">
-                                <span>View all</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                        <div class="destination-list">
-                            <div class="destination-item">
-                                <div class="destination-image">
-                                    <img srcset="./images/feature01.jpg 2x" alt="">
-                                </div>
-                                <div class="destination-content">
-                                    <h3 class="destination-name">Greenwich</h3>
-                                    <span class="destination-country">England</span>
-                                </div>
-                            </div>
-                            <div class="destination-item">
-                                <div class="destination-image">
-                                    <img srcset="./images/nhanhHeader01.jpg 3x" alt="">
-                                </div>
-                                <div class="destination-content">
-                                    <h3 class="destination-name">Greenwich</h3>
-                                    <span class="destination-country">England</span>
-                                </div>
-                            </div>
-                            <div class="destination-item">
-                                <div class="destination-image">
-                                    <img srcset="./images/feature03.jpg 4x" alt="">
-                                </div>
-                                <div class="destination-content">
-                                    <h3 class="destination-name">Greenwich</h3>
-                                    <span class="destination-country">England</span>
-                                </div>
-                            </div>
-                            <div class="destination-item">
-                                <div class="destination-image">
-                                    <img srcset="./images/feature04.jpg 2x" alt="">
-                                </div>
-                                <div class="destination-content">
-                                    <h3 class="destination-name">Greenwich</h3>
-                                    <span class="destination-country">England</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line">
-                        </div>
-                    </div>
-                </section>
-            <!-- End section Feature -->
-
-            <!-- Start section Guide -->
-                <section class="guide">
-                    <div class="containers">
-                        <div class="guide-main">
-                            <div class="giude-content">
-                                <h2 class="heading heading--small guide-heading">
-                                    Guides by Thousand Sunny
-                                </h2>
-                                <p class="text guide-desc">
-                                    Packed with tips and advice from our on-the-ground experts,
-                                    our city guides app (iOS and Android) is the ultimate resource
-                                    before and during a trip. Packed with tips and advice from our on-the-ground   experts,our city guides app (iOS and Android) is the ultimate resource before and during a trip.
-                                </p>
-                                <a href="#!" class="button button--primary">Download</a>
-                            </div>
-                            <div class="guide-image">
-                                <img srcset="./images/img3.png 2x" alt="">
-                            </div>
-                        </div>
-                        <div class="line">
-                        </div>
-                    </div>
-                </section>
-            <!-- End section Guide -->
-
-            <!-- Start section Testimonial -->
-            <section class="testimonial">
-                <div class="containers">
-                    <h2 class="heading heading--small">Testimonials</h2>
-                    <div class="testimonial-container">
-                        <div class="testimonial-content">
-                            <div class="testimonial-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="text testimonial-desc">
-                                “Quisque in lacus a urna fermentum euismod. Integer mi
-                                nibh, dapibus ac scelerisque eu, facilisis quis purus.
-                                Morbi blandit sit amet turpis nec”
-                            </div>
-                            <div class="testimonial-author">
-                                <h3 class="testimonial-name">Truong Quang Nhanh</h3>
-                                <span class="testimonial-job">CEO of An Thịnh Sơn Company</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-image">
-                            <img srcset="./images/test02.png 2x" alt="" />
-                        </div>
-                    </div>
-                    <div class="line">
-                    </div>
-                </div>
-            </section>
-            <!-- End section Testimonial -->
-            
-            <!-- Start section Story -->
-            <section class="story">
-                <div class="containers">
-                    <div class="story-header">
-                        <h2 class="heading heading--small">Trending stories</h2>
-                        <a href="#!" class="story-more">
-                        <span>View all</span>
-                        <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-item">
-                            <div class="story-image">
-                                <img srcset="./images/story1.png 2x" />
-                            </div>
-                            <div class="story-content">
-                                <h3 class="story-title">
-                                The many benefits of taking a healing holiday
-                                </h3>
-                                <p class="story-desc">
-                                ‘Helaing holidays’ are on the rise tohelp maximise your
-                                health and happines...
-                                </p>
-                                <a href="#!" class="story-more">Read more</a>
-                            </div>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-image">
-                                <img srcset="./images/story2.png 2x" />
-                            </div>
-                            <div class="story-content">
-                                <h3 class="story-title">
-                                The many benefits of taking a healing holiday
-                                </h3>
-                                <p class="story-desc">
-                                ‘Helaing holidays’ are on the rise tohelp maximise your
-                                health and happines...
-                                </p>
-                                <a href="#!" class="story-more">Read more</a>
-                            </div>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-image">
-                                <img srcset="./images/story3.png 2x" />
-                            </div>
-                            <div class="story-content">
-                                <h3 class="story-title">
-                                The many benefits of taking a healing holiday
-                                </h3>
-                                <p class="story-desc">
-                                ‘Helaing holidays’ are on the rise tohelp maximise your
-                                health and happines...
-                                </p>
-                                <a href="#!" class="story-more">Read more</a>
-                            </div>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-image">
-                                <img srcset="./images/story4.png 2x" />
-                            </div>
-                            <div class="story-content">
-                                <h3 class="story-title">
-                                The many benefits of taking a healing holiday
-                                </h3>
-                                <p class="story-desc">
-                                ‘Helaing holidays’ are on the rise tohelp maximise your
-                                health and happines...
-                                </p>
-                                <a href="#!" class="story-more">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                    </div>
-                </div>
-            </section>
-            <!-- End section Story -->
-        </main>
-        <!-- End main -->
-
-        <!-- Start footer -->
-        <footer class="footer">
-            <div class="containers">
-                <div class="footer-top">
-                    <div class="footer-column">
-                    <img srcset="./images/smart.png 4x" alt="" class="footer-logo" />
-                    <p class="text footer-desc">
-                        Plan and book your perfect trip with expert advice, travel tips
-                        destination information from us
-                    </p>
-                    <p class="text copy-right">
-                        ©2021 Nguyen Duy Tuan. All rights reserved
-                    </p>
-                    </div>
-                    <div class="footer-column">
-                    <h3 class="footer-title">Destinations</h3>
-                    <ul class="footer-links">
-                        <li class="footer-item">
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        </li>
-                    </ul>
-                    </div>
-                    <div class="footer-column">
-                    <h3 class="footer-title">Shop</h3>
-                    <ul class="footer-links">
-                        <li class="footer-item">
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        </li>
-                    </ul>
-                    </div>
-                    <div class="footer-column">
-                    <h3 class="footer-title">Interest</h3>
-                    <ul class="footer-links">
-                        <li class="footer-item">
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        <a href="#!" class="footer-link">Destination Guides</a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <a href="#!" class="footer-social">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#!" class="footer-social">
-                    <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#!" class="footer-social">
-                    <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#!" class="footer-social">
-                    <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#!" class="footer-social">
-                    <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+        <!-- Start section Explore -->
+        <section class="explore">
+          <div class="containers">
+            <div class="explore-main">
+              <div class="explore-image">
+                <img srcset="./images/img2.png 2x" alt="" />
+              </div>
+              <div class="explore-content">
+                <h2 class="heading heading--small explore-heading">
+                  A new way to explore the world
+                </h2>
+                <p class="text explore-desc" style="text-align: justify">
+                  For decades travellers have reached for Lonely Planet books
+                  when looking to plan and execute their perfect trip, but now,
+                  they can also let Lonely Planet Experiences lead the way. For
+                  decades travellers have reached for Lonely Planet books when
+                  looking to plan and execute their perfect trip, but now, they
+                  can also let Lonely Planet Experiences lead the way
+                </p>
+                <a href="#!" class="button button--primary">Learn more</a>
+              </div>
             </div>
-        </footer>
-        <!-- End footer -->
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- End section Explore  -->
+
+        <!-- Start section Feature -->
+        <section class="destination">
+          <div class="containers">
+            <div class="destination-header">
+              <h2 class="heading heading--small">Feature destination</h2>
+              <a href="#" class="destination-more">
+                <span>View all</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="destination-list">
+              <div class="destination-item">
+                <div class="destination-image">
+                  <img srcset="./images/feature03.jpg 4x" alt="" />
+                </div>
+                <div class="destination-content">
+                  <h3 class="destination-name">Greenwich</h3>
+                  <span class="destination-country">England</span>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="destination-image">
+                  <img srcset="./images/nhanhHeader01.jpg 3x" alt="" />
+                </div>
+                <div class="destination-content">
+                  <h3 class="destination-name">Greenwich</h3>
+                  <span class="destination-country">England</span>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="destination-image">
+                  <img srcset="./images/feature03.jpg 4x" alt="" />
+                </div>
+                <div class="destination-content">
+                  <h3 class="destination-name">Greenwich</h3>
+                  <span class="destination-country">England</span>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="destination-image">
+                  <img srcset="./images/nhanhHeader01.jpg 3x" alt="" />
+                </div>
+                <div class="destination-content">
+                  <h3 class="destination-name">Greenwich</h3>
+                  <span class="destination-country">England</span>
+                </div>
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- End section Feature -->
+
+        <!-- Start section Guide -->
+        <section class="guide">
+          <div class="containers">
+            <div class="guide-main">
+              <div class="giude-content">
+                <h2 class="heading heading--small guide-heading">
+                  Guides by Thousand Sunny
+                </h2>
+                <p class="text guide-desc">
+                  Packed with tips and advice from our on-the-ground experts,
+                  our city guides app (iOS and Android) is the ultimate resource
+                  before and during a trip. Packed with tips and advice from our
+                  on-the-ground experts,our city guides app (iOS and Android) is
+                  the ultimate resource before and during a trip.
+                </p>
+                <a href="#!" class="button button--primary">Download</a>
+              </div>
+              <div class="guide-image">
+                <img srcset="./images/img3.png 2x" alt="" />
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- End section Guide -->
+
+        <!-- Start section Testimonial -->
+        <section class="testimonial">
+          <div class="containers">
+            <h2 class="heading heading--small">Testimonials</h2>
+            <div class="testimonial-container">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <div class="text testimonial-desc">
+                  “Quisque in lacus a urna fermentum euismod. Integer mi nibh,
+                  dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit
+                  sit amet turpis nec”
+                </div>
+                <div class="testimonial-author">
+                  <h3 class="testimonial-name">Truong Quang Nhanh</h3>
+                  <span class="testimonial-job"
+                    >CEO of An Thịnh Sơn Company</span
+                  >
+                </div>
+              </div>
+              <div class="testimonial-image">
+                <img srcset="./images/test02.png 2x" alt="" />
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- End section Testimonial -->
+
+        <!-- Start section Story -->
+        <section class="story">
+          <div class="containers">
+            <div class="story-header">
+              <h2 class="heading heading--small">Trending stories</h2>
+              <a href="#!" class="story-more">
+                <span>View all</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="story-list">
+              <div class="story-item">
+                <div class="story-image">
+                  <img srcset="./images/story1.png 2x" />
+                </div>
+                <div class="story-content">
+                  <h3 class="story-title">
+                    The many benefits of taking a healing holiday
+                  </h3>
+                  <p class="story-desc">
+                    ‘Helaing holidays’ are on the rise tohelp maximise your
+                    health and happines...
+                  </p>
+                  <a href="#!" class="story-more">Read more</a>
+                </div>
+              </div>
+              <div class="story-item">
+                <div class="story-image">
+                  <img srcset="./images/story2.png 2x" />
+                </div>
+                <div class="story-content">
+                  <h3 class="story-title">
+                    The many benefits of taking a healing holiday
+                  </h3>
+                  <p class="story-desc">
+                    ‘Helaing holidays’ are on the rise tohelp maximise your
+                    health and happines...
+                  </p>
+                  <a href="#!" class="story-more">Read more</a>
+                </div>
+              </div>
+              <div class="story-item">
+                <div class="story-image">
+                  <img srcset="./images/story3.png 2x" />
+                </div>
+                <div class="story-content">
+                  <h3 class="story-title">
+                    The many benefits of taking a healing holiday
+                  </h3>
+                  <p class="story-desc">
+                    ‘Helaing holidays’ are on the rise tohelp maximise your
+                    health and happines...
+                  </p>
+                  <a href="#!" class="story-more">Read more</a>
+                </div>
+              </div>
+              <div class="story-item">
+                <div class="story-image">
+                  <img srcset="./images/story4.png 2x" />
+                </div>
+                <div class="story-content">
+                  <h3 class="story-title">
+                    The many benefits of taking a healing holiday
+                  </h3>
+                  <p class="story-desc">
+                    ‘Helaing holidays’ are on the rise tohelp maximise your
+                    health and happines...
+                  </p>
+                  <a href="#!" class="story-more">Read more</a>
+                </div>
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- End section Story -->
+      </main>
+      <!-- End main -->
+
+      <!-- Start section JSON DATA -->
+      <section class="testimonial container mx-auto">
+        <div class="containers">
+          <h2 class="text-center text-4xl text-indigo-400">
+            WEEK 2: JSON DATA IN HOME PAGE
+          </h2>
+          <div
+            class="containers mt-2 d-flex align-content-start flex-wrap"
+            id="list_card"
+            id="page"
+          ></div>
+          <!-- <div class="pagination">
+            <div class="tabs">
+              <div class="first">First</div>
+              <div class="previous">Previous</div>
+              <div class="next">Next</div>
+              <div class="last">Last</div>
+            </div>
+          </div> -->
+        </div>
+        <!-- link image -->
+        <!-- https://o.rada.vn/data/image/2020/01/13/thuyet-minh-ve-da-lat-1.jpg -->
+        <!-- https://img3.thuthuatphanmem.vn/uploads/2019/07/13/hinh-anh-da-lat-mo-suong-sang-som_085718200.jpg -->
+        <!-- https://img3.thuthuatphanmem.vn/uploads/2019/07/13/hinh-anh-da-lat-dep-va-tho-mong_085718044.jpg -->
+        <!-- https://i.pinimg.com/originals/84/17/70/8417704d3d78dddf3f669d71f7ea6b7a.jpg -->
+        <!-- https://vietchallenge.com/images/uploads/b8ba83278c6765393c76.jpg -->
+      </section>
+      <!-- End section JSON DATA -->
+
+      <!-- Start footer -->
+      <footer class="footer">
+        <div class="containers">
+          <div class="footer-top">
+            <div class="footer-column">
+              <img srcset="./images/smart.png 4x" alt="" class="footer-logo" />
+              <p class="text footer-desc">
+                Plan and book your perfect trip with expert advice, travel tips
+                destination information from us
+              </p>
+              <p class="text copy-right">
+                ©2021 Nguyen Duy Tuan. All rights reserved
+              </p>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-title">Destinations</h3>
+              <ul class="footer-links">
+                <li class="footer-item">
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-title">Shop</h3>
+              <ul class="footer-links">
+                <li class="footer-item">
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-title">Interest</h3>
+              <ul class="footer-links">
+                <li class="footer-item">
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                  <a href="#!" class="footer-link">Destination Guides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <a href="#!" class="footer-social">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#!" class="footer-social">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#!" class="footer-social">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#!" class="footer-social">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#!" class="footer-social">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- End footer -->
     </div>
     <script src="./js/app.js"></script>
-</body>
+    <script src="server.js"></script>
+    <!-- <script src="./js/handleLogin.js"></script> -->
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  </body>
 </html>
